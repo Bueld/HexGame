@@ -46,7 +46,7 @@ public class Frame extends Application {
 
 		stage.setScene(scene);
 		stage.setFullScreen(true);
-		stage.setFullScreenExitHint("Press ECS to exit Fullscreen");
+		stage.setFullScreenExitHint("Press ESC to exit Fullscreen");
 		stage.show();
 	}
 	
