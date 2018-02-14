@@ -26,7 +26,8 @@ public class Hexagon extends Polygon {
 		li.setAzimuth(-135);
 		li.setColor(Color.WHITESMOKE);
 		l.setLight(li);
-		l.setSurfaceScale(3.0);
+		l.setSurfaceScale(3.2);
+		l.setDiffuseConstant(0.8);
 
 		setEffect(l);
 
