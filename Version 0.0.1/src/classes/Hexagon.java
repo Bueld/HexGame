@@ -1,5 +1,10 @@
 package classes;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.Timer;
+
 import javafx.event.EventHandler;
 import javafx.scene.effect.Light;
 import javafx.scene.effect.Lighting;
@@ -11,6 +16,8 @@ public class Hexagon extends Polygon {
 
 	private Lighting l;
 	private Light.Distant li;
+
+	public Timer timer;
 
 	public Hexagon(double x, double y, double r) {
 
@@ -31,6 +38,7 @@ public class Hexagon extends Polygon {
 		setEffect(l);
 
 		setFill(Color.STEELBLUE);
+		
 
 		setOnMouseEntered(new EventHandler<MouseEvent>() {
 
@@ -73,7 +81,11 @@ public class Hexagon extends Polygon {
 			}
 
 		});
+		
+		
+		
 
 	}
+	
 
 }

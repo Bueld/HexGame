@@ -3,9 +3,12 @@ package classes;
 import java.util.ArrayList;
 
 import javafx.application.Application;
+import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.scene.Group;
 import javafx.scene.Scene;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
@@ -47,6 +50,16 @@ public class Frame extends Application {
 		stage.setScene(scene);
 		stage.setFullScreen(true);
 		stage.setFullScreenExitHint("Press ESC to exit Fullscreen");
+		
+		scene.setOnKeyPressed(new EventHandler<KeyEvent>() {
+
+			@Override
+			public void handle(KeyEvent e) {
+				if (e.getCode() == KeyCode.F11) {
+					stage.setFullScreen(!stage.isFullScreen());
+				}
+			}
+		});
 		stage.show();
 	}
 	
